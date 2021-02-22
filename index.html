@@ -4,15 +4,56 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/style.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/style.css">
     <title>Calendar Schedule</title>
 </head>
 <body>
-    
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4">Work Day Schedule</h1>
+          <p class="lead">Today's Date</p>
+          <div id="moment"></div> 
+        </div>
+      </div>
 
-<!-- Added jQuery library -->
-    <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script type="text/javascript" src="./assets/script.js"></script>
+    <br>
+    <div id="flex-container">
+          <div id="hour9" class="stack">9am
+            <input id="notes9" class="notes"><button id="save9" class="btn-warning">Save</button>
+          </div>
+          <div id="hour10" class="stack">10am
+            <input id="notes10" class="notes"><button id="save10" class="btn-warning">Save</button>
+          </div>
+          <div id="hour11" class="stack">11am
+            <input id="notes11" class="notes"><button id="save11" class="btn-warning">Save</button>
+          </div>
+          <div id="hour12" class="stack">12pm
+            <input id="notes12" class="notes"><button id="save12" class="btn-warning">Save</button>
+          </div>
+          <div id="hour13" class="stack">1pm
+            <input id="notes13" class="notes"><button id="save13" class="btn-warning">Save</button>
+          </div>
+          <div id="hour14" class="stack">2pm
+            <input id="notes14" class="notes"><button id="save14" class="btn-warning">Save</button>
+          </div>
+          <div id="hour15" class="stack">3pm
+            <input id="notes15" class="notes"><button id="save15" class="btn-warning">Save</button>
+          </div>
+          <div id="hour16" class="stack">4pm
+            <input id="notes16" class="notes"><button id="save16" class="btn-warning">Save</button>
+          </div>
+          <div id="hour17" class="stack">pm
+            <input id="notes17" class="notes"><button id="save17" class="btn-warning">Save</button>
+          </div>
+        </div>
+      </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+
+<script src="./assets/script.js"></script>
 </body>
 </html>
