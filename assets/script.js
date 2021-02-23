@@ -6,14 +6,14 @@ $("#moment").text(today.format('LLLL'));
 
 // set variables to page element 
 var nineHr = $("#notes9");
-var tenHr = $("#note10");
-var elevenHr = $("#note11");
-var twelveHr = $("#note12");
-var thirteenHr = $("#note13");
-var fourteenHr = $("note14");
-var fifteenHr = $("note15");
-var sixteenHr = $("note16");
-var seventeenHr = $("note17");
+var tenHr = $("#notes10");
+var elevenHr = $("#notes11");
+var twelveHr = $("#notes12");
+var thirteenHr = $("#notes13");
+var fourteenHr = $("#notes14");
+var fifteenHr = $("#notes15");
+var sixteenHr = $("#notes16");
+var seventeenHr = $("#notes17");
 var saveNine = $("#save9");
 var saveTen = $("#save10");
 var saveEleven = $("#save11");
@@ -43,7 +43,7 @@ function currentTime(){
 
     // time loop 
     $(".stack").each(function() {
-        var pastHr = parseInt($(this).attr("time").split("-"));
+        var pastHr = parseInt($(this).data("time"));
 
        if (pastHr < currentTime) {
            $(this).addClass("past");
@@ -57,7 +57,7 @@ function currentTime(){
        }
     });
     }
-currentTime();
+
 
 
 //  add event listener
@@ -71,6 +71,7 @@ saveTen.on("click", () => {
 });
 
 saveEleven.on("click", () => {
+    console.log(elevenHr)
     localStorage.setItem("11am", elevenHr.val())
 });
 
@@ -83,7 +84,7 @@ saveThirteen.on("click", () => {
 });
 
 saveFourteen.on("click", () => {
-    localStorage.setItem("2am", fourteenHr.val())
+    localStorage.setItem("2pm", fourteenHr.val())
 });
 
 saveFifteen.on("click", () => {
@@ -97,3 +98,5 @@ saveSixteen.on("click", () => {
 saveSeventeen.on("click", () => {
     localStorage.setItem("5pm", seventeenHr.val())
 });
+
+currentTime();
